@@ -19,7 +19,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.webkit.WebSettings;
-import android.webkit.WebSettings.PluginState;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.EditText;
@@ -33,7 +32,6 @@ public class MainActivity extends Activity {
 	WebView webview;
 	EditText textView;
 
-	@SuppressWarnings("deprecation")
 	@SuppressLint("SetJavaScriptEnabled")
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -50,7 +48,6 @@ public class MainActivity extends Activity {
 		webSettings.setDomStorageEnabled(true);
 		webview.getSettings().setJavaScriptEnabled(true);
 		webview.getSettings().setDomStorageEnabled(true);
-		webview.getSettings().setPluginState(PluginState.ON);
 		webview.getSettings().setDomStorageEnabled(true);
 		if (APIKEY == null || APISECRET == null) {
 			textView.setText("You must enter your own APIKEY and SECRET to use this demo.");
@@ -67,7 +64,7 @@ public class MainActivity extends Activity {
 				// behavior
 				if (url.startsWith("http://www.cognustechnology.com/")) {
 					// authorization complete hide webview for now.
-					webview.setVisibility(View.GONE);
+//					webview.setVisibility(View.GONE);
 
 					Uri uri = Uri.parse(url);
 					Loader loader = new Loader();
@@ -114,6 +111,14 @@ public class MainActivity extends Activity {
 
 		@Override
 		protected JSONObject doInBackground(Uri... params) {
+			
+			
+			s = new ServiceBuilder().provider(YahooApi.class).apiKey(APIKEY)
+					.apiSecret(APISECRET).callback(CALLBACK).build();
+
+			requestToken = s.getRequestToken();
+			
+			
 			String verifier = params[0].getQueryParameter("oauth_verifier");
 			Verifier v = new Verifier(verifier);
 			// save this token for practical use.

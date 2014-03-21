@@ -1,0 +1,110 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (javaClasses.cpp:136), pid=1720, tid=3224
+#  fatal error: Invalid layout of preloaded class
+#
+# JRE version:  (7.0_45-b18) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.45-b08 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000000247d800):  JavaThread "Unknown thread" [_thread_in_vm, id=3224, stack(0x0000000002540000,0x0000000002640000)]
+
+Stack: [0x0000000002540000,0x0000000002640000]
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x000000000247d800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=3224, stack(0x0000000002540000,0x0000000002640000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.008 loading class 0x00000000023dbd00 done
+Event: 0.009 loading class 0x00000000023db720 done
+Event: 0.009 loading class 0x00000000023db700
+Event: 0.009 loading class 0x00000000023e3800
+Event: 0.009 loading class 0x00000000023e3800 done
+Event: 0.009 loading class 0x00000000023e3830
+Event: 0.009 loading class 0x00000000023e3830 done
+Event: 0.009 loading class 0x00000000023e3860
+Event: 0.009 loading class 0x00000000023e3860 done
+Event: 0.009 loading class 0x00000000023db700 done
+
+
+Dynamic libraries:
+0x000000013f560000 - 0x000000013f593000 	C:\Program Files\Java\jre7\bin\javaw.exe
+0x0000000077be0000 - 0x0000000077d8c000 	C:\Windows\SYSTEM32\ntdll.dll
+0x0000000077600000 - 0x000000007771f000 	C:\Windows\system32\kernel32.dll
+0x000007fefe2f0000 - 0x000007fefe35c000 	C:\Windows\system32\KERNELBASE.dll
+0x000007feffa40000 - 0x000007feffb1b000 	C:\Windows\system32\ADVAPI32.dll
+0x000007feffb20000 - 0x000007feffbbf000 	C:\Windows\system32\msvcrt.dll
+0x000007feff560000 - 0x000007feff57f000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007feffd40000 - 0x000007feffe6e000 	C:\Windows\system32\RPCRT4.dll
+0x0000000077500000 - 0x00000000775fa000 	C:\Windows\system32\USER32.dll
+0x000007feff9d0000 - 0x000007feffa37000 	C:\Windows\system32\GDI32.dll
+0x000007fefe770000 - 0x000007fefe77e000 	C:\Windows\system32\LPK.dll
+0x000007fefe420000 - 0x000007fefe4ea000 	C:\Windows\system32\USP10.dll
+0x000007fefc750000 - 0x000007fefc944000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7600.16661_none_fa62ad231704eab7\COMCTL32.dll
+0x000007feffe70000 - 0x000007feffee1000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefe780000 - 0x000007fefe7ae000 	C:\Windows\system32\IMM32.DLL
+0x000007feff8c0000 - 0x000007feff9c9000 	C:\Windows\system32\MSCTF.dll
+0x000007fefdf90000 - 0x000007fefe042000 	C:\Windows\system32\Scdetour.dll
+0x000000000f000000 - 0x000000000f006000 	C:\Windows\system32\detoured.dll
+0x0000000077db0000 - 0x0000000077db7000 	C:\Windows\system32\PSAPI.DLL
+0x0000000070f40000 - 0x0000000071012000 	C:\Program Files\Java\jre7\bin\msvcr100.dll
+0x0000000068020000 - 0x00000000687e9000 	C:\Program Files\Java\jre7\bin\server\jvm.dll
+0x000007fefca40000 - 0x000007fefca49000 	C:\Windows\system32\WSOCK32.dll
+0x000007feffbc0000 - 0x000007feffc0d000 	C:\Windows\system32\WS2_32.dll
+0x000007feff600000 - 0x000007feff608000 	C:\Windows\system32\NSI.dll
+0x000007fefa930000 - 0x000007fefa96b000 	C:\Windows\system32\WINMM.dll
+0x00000000731a0000 - 0x00000000731af000 	C:\Program Files\Java\jre7\bin\verify.dll
+0x0000000073170000 - 0x0000000073198000 	C:\Program Files\Java\jre7\bin\java.dll
+0x0000000072e30000 - 0x0000000072e45000 	C:\Program Files\Java\jre7\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=Cp1252 -Xbootclasspath:E:\Softwares\adt-bundle-windows-x86_64-20131030\sdk\platforms\android-19\android.jar 
+java_command: cognus.yahoo.model.SignPostTest
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Users\user\bin\Sencha\Cmd\4.0.2.67;C:\Program Files (x86)\SenchaSDKTools-2.0.0-beta3;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\nodejs\;C:\wamp\bin\php\php5.4.12;C:\ProgramData\ComposerSetup\bin;C:\Ruby200\bin;C:\Program Files\Java\jre7\bin;C:\Users\user\AppData\Roaming\npm;E:\Softwares\adt-bundle-windows-x86_64-20131030\sdk\platform-tools;E:\Softwares\adt-bundle-windows-x86_64-20131030\sdk\tools;C:\Program Files\nodejs\;C:\Program Files (x86)\Git\bin;C:\Users\user\bin\Sencha\Cmd\4.0.2.67
+USERNAME=user
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 42 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7600 
+
+CPU:total 4 (4 cores per cpu, 1 threads per core) family 6 model 42 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, aes, tsc, tscinvbit
+
+Memory: 4k page, physical 4072380k(181536k free), swap 10214472k(4599036k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (24.45-b08) for windows-amd64 JRE (1.7.0_45-b18), built on Oct  8 2013 05:47:22 by "java_re" with unknown MS VC++:1600
+
+time: Tue Feb 25 14:57:01 2014
+elapsed time: 0 seconds
+
